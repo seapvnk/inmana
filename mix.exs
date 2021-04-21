@@ -37,6 +37,7 @@ defmodule Inmana.MixProject do
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.4"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:bamboo, "~> 2.1.0"},
       {:myxql, ">= 0.0.0"},
       {:phoenix_live_dashboard, "~> 0.4"},
       {:telemetry_metrics, "~> 0.4"},
