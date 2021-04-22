@@ -10,7 +10,8 @@ defmodule InmanaWeb.Router do
 
     get "/", WelcomeController, :index
 
-    post "/restaurants", RestaurantsController, :create
+    resources "/restaurants", RestaurantsController, only: [:create, :show]
+
     resources "/supplies", SuppliesController, only: [:create, :show]
   end
 
@@ -31,6 +32,6 @@ defmodule InmanaWeb.Router do
   end
 
   if Mix.env() == :dev do
-    foward "/sent_emails", Bamboo.SentEmailViewerPlug
+    forward "/sent_emails", Bamboo.SentEmailViewerPlug
   end
 end
